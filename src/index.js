@@ -28,6 +28,7 @@ function renderSingleToy(toy) {
       <img data-id=${toy.id} src=${toy.image} class="toy-avatar" />
       <p data-id=${toy.id}>${toy.likes} Likes </p>
       <button data-id=${toy.id} data-action='like' class="like-btn">Like <3</button>
+      <button data-id=${toy.id} data-action='delete' class="delete-btn">Delete 👅</button>
   </div>
   `
 }//renderSingleToy end
@@ -75,13 +76,16 @@ addBtn.addEventListener('click', () => {
 })
 
 toyCollection.addEventListener("click", function(e) {
+  const toyID = parseInt(e.target.dataset.id)
   if (e.target.dataset.action === "like") {
-    const toyID = parseInt(e.target.dataset.id)
       // const foundToy = toys.find(function(toy) {
       //   return toy.id === toyID
       likeTheToy(toyID)
 
-  }//end of the if
+  } else if (e.target.dataset.action === "delete") {
+    deleteTheToy(toyID)
+  }
+  //end of the if
 })//end of likeButton event listener
 
     function likeTheToy(id) {
@@ -98,6 +102,17 @@ toyCollection.addEventListener("click", function(e) {
       })//end of fetch
       renderAllToys()
     }//end of likeTheToy function
+
+function deleteTheToy(id) {
+  const foundToy = toys.find(function(toy) {
+    return toy.id === id
+  })//end of toys.find
+    fetch(`${URL}/${id}`, {
+      method: "delete"
+    })//end of fetch
+    const deletedToy = document.querySelector(`div[data-id="${id}"]`)
+    toyCollection.removeChild(deletedToy)
+}// delete the toy ending
 
 
 
