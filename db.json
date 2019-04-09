@@ -10,7 +10,7 @@
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 8
+      "likes": 18
     },
     {
       "id": 3,
@@ -47,6 +47,30 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Haha Toy!",
+      "image": "https://i5.walmartimages.com/asr/c9e3d714-d4cd-4c88-b494-ad82fc85ff53_1.097bd9f5c5d53ec968eb2806bdf36f40.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+      "likes": 2,
+      "id": 9
+    },
+    {
+      "name": "Rupaul Barbie",
+      "image": "https://assets.teenvogue.com/photos/583f1aa843ca185e77e85353/master/w_1080,h_1081,c_limit/barbie-tout.jpg",
+      "likes": 15,
+      "id": 10
+    },
+    {
+      "name": "Rupaul",
+      "image": "https://i.pinimg.com/originals/c8/fe/e1/c8fee13ac97703a8cfb57db62ba69a3f.jpg",
+      "likes": 19,
+      "id": 11
+    },
+    {
+      "name": "Diano Taco",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51RZVsfLi%2BL._SY300_QL70_.jpg",
+      "likes": 0,
+      "id": 12
     }
   ]
 }
